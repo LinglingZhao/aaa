@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CustomerProductInfo",
+  "description": "客户产品信息实体",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "主键ID"
+    },
+    "orderNum": {
+      "type": "integer",
+      "description": "序号"
+    },
+    "fullUnitName": {
+      "type": "string",
+      "description": "单位全称",
+      "maxLength": 256
+    },
+    "productName": {
+      "type": "string",
+      "description": "产品名称",
+      "maxLength": 100
+    },
+    "productType": {
+      "type": "string",
+      "description": "产品类型",
+      "maxLength": 100
+    },
+    "productDescription": {
+      "type": "string",
+      "description": "产品描述",
+      "maxLength": 256
+    },
+    "matchingPower": {
+      "type": "string",
+      "description": "产品配套动力",
+      "maxLength": 100
+    }
+  },
+  "required": ["id", "orderNum", "fullUnitName"]
+}

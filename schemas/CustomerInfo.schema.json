@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CustomerInfo",
+  "description": "客户信息实体",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "主键ID"
+    },
+    "orderNum": {
+      "type": "integer",
+      "description": "序号"
+    },
+    "fullUnitName": {
+      "type": "string",
+      "description": "单位全称",
+      "maxLength": 256
+    },
+    "abbreviation": {
+      "type": "string",
+      "description": "简称",
+      "maxLength": 100
+    },
+    "regionalArea": {
+      "type": "string",
+      "description": "片区",
+      "maxLength": 100
+    },
+    "province": {
+      "type": "string",
+      "description": "省份",
+      "maxLength": 100
+    },
+    "municipality": {
+      "type": "string",
+      "description": "地市",
+      "maxLength": 100
+    },
+    "businessAttribute": {
+      "type": "string",
+      "description": "企业属性",
+      "maxLength": 100
+    },
+    "registeredCapitalMillionYuan": {
+      "type": "string",
+      "description": "注册资本(万元)",
+      "maxLength": 100
+    },
+    "enterpriseSize": {
+      "type": "string",
+      "description": "企业规模",
+      "maxLength": 100
+    },
+    "businessDomain": {
+      "type": "string",
+      "description": "业务领域",
+      "maxLength": 256
+    },
+    "enterpriseProfile": {
+      "type": "string",
+      "description": "企业简介",
+      "maxLength": 2560
+    },
+    "visitRecord": {
+      "type": "string",
+      "description": "走访记录",
+      "maxLength": 2560
+    },
+    "cooperationAgreement": {
+      "type": "string",
+      "description": "合作协议情况",
+      "maxLength": 2560
+    },
+    "followUpConcerns": {
+      "type": "string",
+      "description": "后续关注",
+      "maxLength": 2560
+    }
+  },
+  "required": ["id", "orderNum", "fullUnitName"]
+}

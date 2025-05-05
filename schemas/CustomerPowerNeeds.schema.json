@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "CustomerPowerNeeds",
+  "description": "客户用电需求实体",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "主键ID"
+    },
+    "orderNum": {
+      "type": "integer",
+      "description": "序号"
+    },
+    "fullUnitName": {
+      "type": "string",
+      "description": "单位全称",
+      "maxLength": 256
+    },
+    "powerDemand": {
+      "type": "boolean",
+      "description": "动力是否需求"
+    },
+    "powerType": {
+      "type": "string",
+      "description": "动力类型",
+      "maxLength": 100
+    },
+    "technicalRequirements": {
+      "type": "string",
+      "description": "动力技术需求",
+      "maxLength": 256
+    },
+    "marketDemandQuantity": {
+      "type": "integer",
+      "description": "动力市场需求量(台)"
+    }
+  },
+  "required": ["id", "orderNum", "fullUnitName"]
+}
