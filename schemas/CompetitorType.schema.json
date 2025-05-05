@@ -6,7 +6,8 @@
   "properties": {
     "id": {
       "type": "string",
-      "description": "主键ID"
+      "description": "主键ID",
+      "maxLength": 36
     },
     "orderNum": {
       "type": "integer",
@@ -20,12 +21,12 @@
     "competitorType": {
       "type": "string",
       "description": "竞争类型",
-      "maxLength": 100
+      "maxLength": 256
     },
     "modelType": {
       "type": "string",
       "description": "型号类型",
-      "maxLength": 100
+      "maxLength": 256
     },
     "radarChart": {
       "type": "string",

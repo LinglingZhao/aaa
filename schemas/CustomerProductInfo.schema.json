@@ -5,7 +5,7 @@
   "description": "客户产品信息实体",
   "properties": {
     "id": {
-      "type": "string",
+      "type": "integer",
       "description": "主键ID"
     },
     "orderNum": {
@@ -20,22 +20,22 @@
     "productName": {
       "type": "string",
       "description": "产品名称",
-      "maxLength": 100
+      "maxLength": 256
     },
     "productType": {
       "type": "string",
       "description": "产品类型",
-      "maxLength": 100
+      "maxLength": 256
     },
     "productDescription": {
       "type": "string",
       "description": "产品描述",
-      "maxLength": 256
+      "maxLength": 2048
     },
-    "matchingPower": {
+    "productAssemblyPower": {
       "type": "string",
       "description": "产品配套动力",
-      "maxLength": 100
+      "maxLength": 256
     }
   },
   "required": ["id", "orderNum", "fullUnitName"]

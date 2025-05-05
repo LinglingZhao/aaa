@@ -5,7 +5,7 @@
   "description": "竞争对手产品信息实体",
   "properties": {
     "id": {
-      "type": "string",
+      "type": "integer",
       "description": "主键ID"
     },
     "orderNum": {
@@ -20,22 +20,47 @@
     "productName": {
       "type": "string",
       "description": "产品名称",
-      "maxLength": 100
+      "maxLength": 256
     },
     "productType": {
       "type": "string",
       "description": "产品类型",
       "maxLength": 100
     },
+    "developmentStatus": {
+      "type": "string",
+      "description": "在研在产状态",
+      "maxLength": 256
+    },
     "productDescription": {
       "type": "string",
       "description": "产品描述",
+      "maxLength": 2560
+    },
+    "productPic": {
+      "type": "string",
+      "description": "产品图片",
       "maxLength": 256
     },
-    "matchingPower": {
+    "scenarios": {
       "type": "string",
-      "description": "产品配套动力",
-      "maxLength": 100
+      "description": "应用场景",
+      "maxLength": 256
+    },
+    "assemblyObject": {
+      "type": "string",
+      "description": "装机对象",
+      "maxLength": 256
+    },
+    "deliverySituation": {
+      "type": "string",
+      "description": "交付情况",
+      "maxLength": 2560
+    },
+    "researchInstituteConcurrencyProducts": {
+      "type": "string",
+      "description": "研究所竞争关联产品",
+      "maxLength": 256
     }
   },
   "required": ["id", "orderNum", "fullUnitName"]

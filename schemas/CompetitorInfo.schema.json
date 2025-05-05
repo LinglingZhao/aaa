@@ -5,7 +5,7 @@
   "description": "竞争对手信息实体",
   "properties": {
     "id": {
-      "type": "string",
+      "type": "integer",
       "description": "主键ID"
     },
     "orderNum": {
@@ -15,7 +15,7 @@
     "belongingGroup": {
       "type": "string",
       "description": "隶属集团",
-      "maxLength": 100
+      "maxLength": 256
     },
     "fullUnitName": {
       "type": "string",
@@ -24,43 +24,48 @@
     },
     "abbreviation": {
       "type": "string",
-      "description": "简称",
-      "maxLength": 100
+      "description": "单位简称",
+      "maxLength": 256
     },
     "regionalArea": {
       "type": "string",
       "description": "片区",
-      "maxLength": 100
+      "maxLength": 256
     },
     "province": {
       "type": "string",
       "description": "省份",
-      "maxLength": 100
+      "maxLength": 256
     },
     "municipality": {
       "type": "string",
       "description": "地市",
-      "maxLength": 100
+      "maxLength": 256
     },
     "businessAttribute": {
       "type": "string",
       "description": "企业属性",
-      "maxLength": 100
+      "maxLength": 256
     },
     "registeredCapitalMillionYuan": {
       "type": "string",
-      "description": "注册资本(万元)",
-      "maxLength": 100
+      "description": "注册资本 (万元)",
+      "maxLength": 256
     },
     "enterpriseSize": {
       "type": "string",
       "description": "企业规模",
-      "maxLength": 100
+      "maxLength": 600
     },
     "businessDomain": {
       "type": "string",
       "description": "业务领域",
-      "maxLength": 256
+      "maxLength": 600
+    },
+    "enterpriseProfile": {
+      "type": "string",
+      "description": "企业简介",
+      "maxLength": 800
     },
     "technicalRoute": {
       "type": "string",
@@ -70,12 +75,12 @@
     "industryLayout": {
       "type": "string",
       "description": "产业布局",
-      "maxLength": 256
+      "maxLength": 1024
     },
     "supplyChainComplementary": {
       "type": "string",
       "description": "供应链配套",
-      "maxLength": 256
+      "maxLength": 512
     },
     "financialInvestmentInformation": {
       "type": "string",
@@ -85,12 +90,17 @@
     "cooperationWithOtherCompanies": {
       "type": "string",
       "description": "其它合作",
-      "maxLength": 256
+      "maxLength": 512
+    },
+    "others": {
+      "type": "string",
+      "description": "其他情况",
+      "maxLength": 512
     },
     "concurrentEnterpriseRating": {
       "type": "string",
       "description": "竞争企业评级",
-      "maxLength": 100
+      "maxLength": 32
     },
     "competitionField": {
       "type": "string",
@@ -100,17 +110,7 @@
     "indexOfCompetitiveness": {
       "type": "string",
       "description": "竞争指数",
-      "maxLength": 100
-    },
-    "enterpriseProfile": {
-      "type": "string",
-      "description": "企业简介",
-      "maxLength": 2560
-    },
-    "otherSituations": {
-      "type": "string",
-      "description": "其他情况",
-      "maxLength": 2560
+      "maxLength": 32
     }
   },
   "required": ["id", "orderNum", "fullUnitName"]
