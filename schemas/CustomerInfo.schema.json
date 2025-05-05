@@ -5,12 +5,17 @@
   "description": "客户信息实体",
   "properties": {
     "id": {
-      "type": "string",
+      "type": "integer",
       "description": "主键ID"
     },
     "orderNum": {
       "type": "integer",
       "description": "序号"
+    },
+    "belongingGroup": {
+      "type": "string",
+      "description": "隶属集团",
+      "maxLength": 256
     },
     "fullUnitName": {
       "type": "string",
@@ -19,63 +24,143 @@
     },
     "abbreviation": {
       "type": "string",
-      "description": "简称",
-      "maxLength": 100
+      "description": "单位简称",
+      "maxLength": 256
+    },
+    "responsiblePerson": {
+      "type": "string",
+      "description": "负责人",
+      "maxLength": 256
+    },
+    "primaryOperationDomain": {
+      "type": "string",
+      "description": "所属主要运营领域",
+      "maxLength": 256
+    },
+    "unitCode": {
+      "type": "string",
+      "description": "单位编号",
+      "maxLength": 256
+    },
+    "primaryOperationModel": {
+      "type": "string",
+      "description": "所属主要运营机型",
+      "maxLength": 256
     },
     "regionalArea": {
       "type": "string",
       "description": "片区",
-      "maxLength": 100
+      "maxLength": 256
     },
     "province": {
       "type": "string",
       "description": "省份",
-      "maxLength": 100
+      "maxLength": 256
     },
     "municipality": {
       "type": "string",
       "description": "地市",
-      "maxLength": 100
+      "maxLength": 256
     },
-    "businessAttribute": {
+    "customerNature": {
       "type": "string",
-      "description": "企业属性",
-      "maxLength": 100
+      "description": "客户性质",
+      "maxLength": 256
+    },
+    "customerType": {
+      "type": "string",
+      "description": "客户类型",
+      "maxLength": 256
+    },
+    "isCompetition": {
+      "type": "string",
+      "description": "是否竞争",
+      "maxLength": 256
+    },
+    "competitors": {
+      "type": "string",
+      "description": "竞争对手",
+      "maxLength": 256
     },
     "registeredCapitalMillionYuan": {
       "type": "string",
       "description": "注册资本(万元)",
-      "maxLength": 100
+      "maxLength": 256
     },
     "enterpriseSize": {
       "type": "string",
       "description": "企业规模",
-      "maxLength": 100
+      "maxLength": 600
     },
     "businessDomain": {
       "type": "string",
       "description": "业务领域",
-      "maxLength": 256
+      "maxLength": 600
     },
     "enterpriseProfile": {
       "type": "string",
       "description": "企业简介",
-      "maxLength": 2560
+      "maxLength": 800
+    },
+    "isConnect": {
+      "type": "string",
+      "description": "是否对接",
+      "maxLength": 256
+    },
+    "connectionAttitude": {
+      "type": "string",
+      "description": "对接态度",
+      "maxLength": 256
+    },
+    "negativeReasons": {
+      "type": "string",
+      "description": "非积极态度主要原因",
+      "maxLength": 500
+    },
+    "contactInformation": {
+      "type": "string",
+      "description": "联系方式",
+      "maxLength": 256
+    },
+    "departmentContact": {
+      "type": "string",
+      "description": "部门对接人",
+      "maxLength": 256
     },
     "visitRecord": {
       "type": "string",
       "description": "走访记录",
       "maxLength": 2560
     },
-    "cooperationAgreement": {
+    "cooperationAgreementStatus": {
       "type": "string",
       "description": "合作协议情况",
-      "maxLength": 2560
+      "maxLength": 1000
     },
-    "followUpConcerns": {
+    "subsequentAttention": {
       "type": "string",
       "description": "后续关注",
       "maxLength": 2560
+    },
+    "evaluationScore1": {
+      "type": "integer",
+      "description": "评分1",
+      "minimum": 0
+    },
+    "evaluationScore2": {
+      "type": "integer",
+      "description": "评分2",
+      "minimum": 0
+    },
+    "evaluationScore3": {
+      "type": "integer",
+      "description": "评分3",
+      "minimum": 0
+    },
+    "evaluationScore4": {
+      "type": "integer",
+      "description": "评分4",
+      "minimum": 0
     }
   },
   "required": ["id", "orderNum", "fullUnitName"]
